@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Identity</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Community Identity</h1>
+
+        <div id="content"></div>
+    </div>
+
+    <script>
+        // Load the content from the JSON file
+        fetch('content.json')
+        .then(response => response.json())
+        .then(data => {
+            const contentDiv = document.getElementById('content');
+            data.forEach(section => {
+                const sectionDiv = document.createElement('div');
+                sectionDiv.className = 'section';
+
+                const sectionHeader = document.createElement('div');
+                sectionHeader.className = 'section-header';
+                sectionHeader.onclick = () => toggleSection(sectionHeader);
+                sectionHeader.innerHTML = `${section.section_title} <span class="toggle-icon">&#9654;</span>`;
+                sectionDiv.appendChild(sectionHeader);
+
+                const sectionContent = document.createElement('div');
+                sectionContent.className = 'section-content';
+
+                section.subsections.forEach(subsection => {
+                    const subsectionDiv = document.createElement('div');
+                    subsectionDiv.className = 'subsection';
+
+                    const subsectionTitle = document.createElement('h2');
+                    subsectionTitle.innerText = subsection.title;
+                    subsectionDiv.appendChild(subsectionTitle);
+
+                    if (Array.isArray(subsection.content)) {
+                        const list = document.createElement('ul');
+                        subsection.content.forEach(item => {
+                            const listItem = document.createElement('li');
+                            listItem.innerText = item;
+                            list.appendChild(listItem);
+                        });
+                        subsectionDiv.appendChild(list);
+                    } else {
+                        const paragraph = document.createElement('p');
+                        paragraph.innerText = subsection.content;
+                        subsectionDiv.appendChild(paragraph);
+                    }
+
+                    sectionContent.appendChild(subsectionDiv);
+                });
+
+                sectionDiv.appendChild(sectionContent);
+                contentDiv.appendChild(sectionDiv);
+            });
+        });
+
+        function toggleSection(element) {
+            const content = element.nextElementSibling;
+            const icon = element.querySelector(".toggle-icon");
+            if (content.style.display === "block") {
+                content.style.display = "none";
+                icon.style.transform = "rotate(0deg)";
+            } else {
+                const allSections = document.getElementsByClassName("section-content");
+                const allIcons = document.getElementsByClassName("toggle-icon");
+                for (let i = 0; i < allSections.length; i++) {
+                    allSections[i].style.display = "none";
+                    allIcons[i].style.transform = "rotate(0deg)";
+                }
+                content.style.display = "block";
+                icon.style.transform = "rotate(90deg)";
+            }
+        }
+    </script>
+</body>
+</html>

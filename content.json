@@ -1,0 +1,68 @@
+
+[{
+    "section_title": "Demografie",
+    "subsections": [
+        {
+            "title": "Beschrijving",
+            "content": "Basisstatistieken over de gemeenschap, zoals leeftijd, geslacht, inkomen, locatie en opleiding."
+        },
+        {
+            "title": "Te Verzamelen Informatie",
+            "content": [
+                "Leeftijdsverdeling, geslachtsverhouding, sociaaleconomische status, geografische locatie, opleidingsniveau."
+            ]
+        },
+        {
+            "title": "Vragen om te Stellen",
+            "content": [
+                "Wat is de gemiddelde leeftijds- en geslachtsverdeling binnen de gemeenschap?",
+                "Wat zijn de gangbare beroepen of inkomensniveaus?",
+                "Waar bevindt de gemeenschap zich voornamelijk?"
+            ]
+        }
+    ]
+},
+{
+    "section_title": "Culturele Achtergrond",
+    "subsections": [
+        {
+            "title": "Beschrijving",
+            "content": "Culturele wortels en invloeden die de gemeenschap vormgeven, inclusief etnische samenstelling, religieuze overtuigingen en historische culturele invloeden."
+        },
+        {
+            "title": "Te Verzamelen Informatie",
+            "content": [
+                "Etnische en culturele samenstelling, religieuze overtuigingen of spirituele praktijken, historische culturele invloeden."
+            ]
+        },
+        {
+            "title": "Vragen om te Stellen",
+            "content": [
+                "Welke culturele of etnische achtergronden zijn vertegenwoordigd in de gemeenschap?",
+                "Zijn er overheersende religieuze overtuigingen of praktijken?"
+            ]
+        }
+    ]
+},
+{
+    "section_title": "Geschiedenis en Oorsprong",
+    "subsections": [
+        {
+            "title": "Beschrijving",
+            "content": "Het verhaal van hoe de gemeenschap is ontstaan, belangrijke historische mijlpalen en significante ontwikkelingen."
+        },
+        {
+            "title": "Te Verzamelen Informatie",
+            "content": [
+                "Oorsprongsverhaal van de gemeenschap, belangrijke historische gebeurtenissen, significante veranderingen of ontwikkelingen."
+            ]
+        },
+        {
+            "title": "Vragen om te Stellen",
+            "content": [
+                "Hoe is de gemeenschap ontstaan en wat waren de belangrijkste momenten in haar geschiedenis?",
+                "Welke uitdagingen heeft de gemeenschap overwonnen?"
+            ]
+        }
+    ]
+}]
